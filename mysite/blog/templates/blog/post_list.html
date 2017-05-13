@@ -6,6 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-    yummy yummy
+        <ul>
+        {% for x in post %}
+        <li>
+            <p>{{x.author}} : {{x.title}}</p>
+            <p>{{x.text}}</p>
+        </li>
+        {% endfor %}
+        </ul>
     </body>
 </html>
