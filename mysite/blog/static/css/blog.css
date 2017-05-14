@@ -1,0 +1,15 @@
+body {
+    padding-left: 30px;
+    font-family: '나눔바른고딕';
+}
+
+h1 p {
+    color : rosybrown;
+    
+}
+
+hr {
+    color : beige;
+    width : 500px;
+    margin-left: 0px;
+}

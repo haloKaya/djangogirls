@@ -1,18 +1,21 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <ul>
         {% for x in post %}
-        <li>
-            <p>{{x.author}} : {{x.title}}</p>
+        <div>
+            <h1><p>{{x.title}}</p></h1>
+            <p>쓰니 : <b>{{x.author}}</b>  /  {{x.published_date}}</p>
+            
             <p>{{x.text}}</p>
-        </li>
+        <hr>
+        </div>
         {% endfor %}
-        </ul>
     </body>
 </html>
