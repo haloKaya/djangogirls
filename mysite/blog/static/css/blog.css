@@ -4,12 +4,12 @@ body {
 }
 
 h1 p {
-    color : rosybrown;
+    color: rosybrown;
     
 }
 
 hr {
-    color : beige;
-    width : 500px;
-    margin-left: 0px;
+    color: beige;
+    width: 500px;
+    margin-left: 0;
 }
