@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+        <div class="post">
+            
+            {% if x.title %}
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ x.title }}</a></h1>
+            {% endif %}
+            <p>쓰니 : <b>{{ x.author }}</b></p>
+            <p>일시 : {{ x.published_date }}</p>       
+            <p>내용 : {{ x.text }}</p>
+            
+            
+        </div>
+
+{% endblock %}
