@@ -4,12 +4,13 @@
 
         <div class="post">
             
-            {% if x.title %}
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ x.title }}</a></h1>
+            {% if post.title %}
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             {% endif %}
-            <p>쓰니 : <b>{{ x.author }}</b></p>
-            <p>일시 : {{ x.published_date }}</p>       
-            <p>내용 : {{ x.text }}</p>
+            <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+            <p>쓰니 : <b>{{ post.author }}</b></p>
+            <p>일시 : {{ post.published_date }}</p>       
+            <p>내용 : {{ post.text }}</p>
             
             
         </div>
