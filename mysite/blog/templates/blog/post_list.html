@@ -1,10 +1,13 @@
+{% extends 'blog/base.html' %}
+
 {% block content %}
     {% for x in post %}
         <div class="post">
-            <h1><a href="">{{ x.title }}</a></h1>
-            <p>쓰니 : <b>{{ x.author }}</b> 
-            /  {{ x.published_date }}</p>       
+            <h1><a href="{% url 'post_detail' pk=x.pk %}">{{ x.title }}</a></h1>
+            <p>쓰니 : <b>{{ x.author }}</b> </p>
+            <p>일시 : {{ x.published_date }}</p>       
             <p>내용 : {{ x.text }}</p>
+            <hr>
         </div>
     {% endfor %}
 {% endblock content %}
